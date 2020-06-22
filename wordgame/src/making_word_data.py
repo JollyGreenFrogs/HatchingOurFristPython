@@ -1,4 +1,4 @@
-# Libary Imports
+# Library Imports
 import pandas as pd
 
 def game_setup():
@@ -8,7 +8,7 @@ def game_setup():
     hint_list = []
     number_trys = []
 
-    number_rounds = int(input("How mnay times to do you want to play? "))
+    number_rounds = int(input("How many times to do you want to play? "))
 
     for rounds in range(number_rounds):
 

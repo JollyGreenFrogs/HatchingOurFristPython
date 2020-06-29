@@ -20,14 +20,23 @@ class game_data:
        """
        Function will put together all the lists into a data frame
        """ 
-
+       for rounds in range(self.number_rounds):
+           self.add_word_list(input("Whats the word? "))
+           self.added_game_number(rounds)
+           self.added_hint_list(input("Whats the hint? "))
+           self.added_number_of_tries(input("How many tries? "))
+    
+    def write_config_file(self):
+        """
+        Write config file
+        """
        df = pd.DataFrame( {
             "GameNumber":self.game_number_list,
             "Word":self.word_list,
             "Hint":self.hint_list,
             "Lives":self.number_tries
         })
-       df.to_csv("data\GameFile.csv")
+        df.to_csv("data\\GameFile.csv")
     
     def added_word_list(self,new_word):
         """

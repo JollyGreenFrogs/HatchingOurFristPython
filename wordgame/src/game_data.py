@@ -30,7 +30,7 @@ class game_data:
         """
         Write config file
         """
-       df = pd.DataFrame( {
+        df = pd.DataFrame( {
             "GameNumber":self.game_number_list,
             "Word":self.word_list,
             "Hint":self.hint_list,
